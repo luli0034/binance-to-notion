@@ -6,9 +6,14 @@
 	<br>
 </div>
 
-In order to inspect the detail of Crypto Investment by each symbol such as ***averaging buying price of*** `BTC/USDT`. I simply integrate **[Binance API](https://binance-docs.github.io/apidocs/spot/en/#introduction)** and **[Notion integrations](https://developers.notion.com/)** in this project.
+In order to inspect the detail of Crypto Investment by each symbol such as ***averaging buying price of*** `BTC/USDT` or `ETH/USDT`. I simply integrate **[Binance API](https://binance-docs.github.io/apidocs/spot/en/#introduction)** and **[Notion integrations](https://developers.notion.com/)** in this project.
 
 # 📽️ Quick Demo
+<div align="center">
+	<img src="image/demo.png">
+	<br>
+</div>
+Your notion page will like this if program run successfully. The database contain 6 columns including crypto name, profit, cryptocurrencies quentity, averaging buying price, marketing price, lastest update trade ID.
 
 # 📃 Requirements
 
