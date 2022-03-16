@@ -67,21 +67,31 @@ Your notion page will like this if program run successfully. The database contai
 # 🚀 Usage
 
 Steps to build a Docker image:
+  
+Now, you can directly run via DockerHub without clone this repo.
 
-1. ***Clone this repo***
+```docker
+docker run --env API_KEY={API_KEY}\
+       --env SECRET_KEY={SECRET_KEY}\
+       --env NOTION_AUTH={NOTION_AUTH}\
+       luli245683/binance2notion --db_id={database_id} --base={coinbase}
+```
+
+
+1. (optional) ***Clone this repo***
     
     ```bash
     git clone https://github.com/luli0034/binance-to-notion.git
     ```
     
-2. ***Build the image***
+2. (optional) ***Build the image***
     
     ```bash
     cd ./binance-to-notion
     docker build -t binance2notion . --no-cache
     ```
     
-3. ***Set container parameters***
+3. (optional) ***Set container parameters***
     
     Before running the built image, we need to set the environment variables for Binance API Key and secret as well as notion authentication.
     
@@ -99,3 +109,4 @@ Steps to build a Docker image:
                --env NOTION_AUTH={NOTION_AUTH}\
                binance2notion --db_id={database_id} --base={coinbase}
     ```
+  
