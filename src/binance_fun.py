@@ -70,7 +70,7 @@ class Coin:
         
         return qty, cost
 
-    @retry()
+    @retry(logger=logger)
     def _get_order_history(self):
         try:
             if self.fromId:
@@ -110,6 +110,10 @@ class Account():
         self.acctAsset = {}
         for coin in self.acctBalances:
             if coin != self.pairwith:
+                try:
+                    self.binance.get_my_trades(symbol=coin+self.pairwith)
+                except:
+                    continue
                 self.acctAsset[coin] = Coin(self.binance, coin, self.pairwith)
                 if self.notion is not None:
                     logger.info(f"Query {coin} asset from database")
